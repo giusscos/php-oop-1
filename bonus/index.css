@@ -46,7 +46,7 @@ ul {
     aspect-ratio: 2/3;
 }
 
-.list_item .img_wrapper > img {
+.list_item .img_wrapper>img {
     display: block;
     object-fit: cover;
     object-position: center;
@@ -61,4 +61,20 @@ ul {
 
 .list_item p {
     font-size: 1.2rem;
+}
+
+.cast_wrapper {
+    gap: 1rem;
+    display: flex;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.cast_wrapper .list_cast{
+    display: flex;
+}
+
+.list_item .list_cast .list_item {
+    padding: 0 1rem;
 }
