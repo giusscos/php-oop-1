@@ -11,8 +11,8 @@
 ### BONUS
 - inserite 4/5 istanze in un array, e ciclatelo per stampare i dati nella pagina come una lista di card. (se avete inserito l’immagine del film stampare anche l ímmagine);
 - aggiungete nel film una proprietà di tipo array per gestire gli attori che hanno recitato in quel film;
-- inizialmente gestite gli attori come stringe;
+- inizialmente gestite gli attori come stringhe;
 - successivamente create una seconda classe Actor per rappresentare gli attori;
-- nella classe movie definite due metodi
-- uno si occuperà di aggiungere un attore al cast (controllando che sia già stato aggiunto);
-- l’altro farà il procedimento opposto;
+- nella classe movie definite due metodi:
+    - uno si occuperà di aggiungere un attore al cast (controllando che sia già stato aggiunto);
+    - l’altro farà il procedimento opposto;
