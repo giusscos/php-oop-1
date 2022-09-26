@@ -6,7 +6,7 @@ class Movie
     public $vote;
     public $actors;
 
-    function __construct($poster, $title, $vote, $actors)
+    function __construct($poster, $title, $vote, $actors )
     {
         if ($poster) {
             $this->poster = $poster;

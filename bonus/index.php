@@ -15,11 +15,18 @@
     <?php
     include __DIR__ . '/movie.php';
 
+    $actors = [
+        ['Ryan', 'Morena', 'Ed'],
+        ['Robert', 'Guy', 'Gwynenth'],
+        ['Ryan', 'Blake', 'Peter'],
+        ['Keanue', 'Laurence', 'Carrie-Anne'],
+    ];
+
     $movies = [
-        $movie1 = new Movie('deadpool-poster', 'Dead Pool', '4', ['Ryan', 'Morena', 'Ed']),
-        $movie2 = new Movie('iron-man-3', 'Iron Man 3', '4.5', ['Robert', 'Guy', 'Gwynenth']),
-        $movie3 = new Movie('lanterna-verde', 'Lanterna Verde', '1', ['Ryan', 'Blake', 'Peter']),
-        $movie4 = new Movie('matrix', 'Matrix', '5', ['Keanue', 'Laurence', 'Carrie-Anne']),
+        new Movie('deadpool-poster', 'Dead Pool', '4', $actors[0]),
+        new Movie('iron-man-3', 'Iron Man 3', '4.5', $actors[1]),
+        new Movie('lanterna-verde', 'Lanterna Verde', '1', $actors[2]),
+        new Movie('matrix', 'Matrix', '5', $actors[3]),
     ];
     ?>
     <main>
