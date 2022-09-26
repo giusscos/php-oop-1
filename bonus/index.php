@@ -15,7 +15,6 @@
     <?php
     include __DIR__ . '/movie.php';
 
-
     $movies = [
         $movie1 = new Movie('deadpool-poster', 'Dead Pool', '4'),
         $movie2 = new Movie('iron-man-3', 'Iron Man 3', '4.5'),

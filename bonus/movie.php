@@ -1,32 +1,44 @@
 <?php
-
-class Movie {
+class Movie
+{
     public $poster;
     public $title;
     public $vote;
 
     function __construct($poster, $title, $vote)
     {
-        if($poster){
+        if ($poster) {
             $this->poster = $poster;
         } else {
             $this->poster = 'null';
         }
-        $this->title = $title;
-        $this->vote = $vote;
+        if ($title) {
+            $this->title = $title;
+        } else {
+            $this->title = 'null';
+        }
+        if ($vote) {
+            $this->vote = $vote;
+        } else {
+            $this->vote = '0';
+        }
     }
 
-    function get_info(){
+    function get_info()
+    {
         return $this->poster . ' >> ' . $this->title . ' >> ' . $this->vote . ';';
     }
 
-    function get_poster(){
+    function get_poster()
+    {
         return $this->poster;
     }
-    function get_title(){
+    function get_title()
+    {
         return $this->title;
     }
-    function get_vote(){
+    function get_vote()
+    {
         return $this->vote;
     }
 }
