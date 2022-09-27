@@ -16,29 +16,40 @@
     include __DIR__ . '/Movie.php';
     include __DIR__ . '/Actor.php';
 
-    $actors = [
-        ['Ryan', 'Morena', 'Ed'],
-        ['Robert', 'Guy', 'Gwynenth'],
-        ['Ryan', 'Blake', 'Peter'],
-        ['Keanue', 'Laurence', 'Carrie-Anne'],
-    ];
-
     $actor1 = new Actor('Ryan', '32', 'M');
     $actor2 = new Actor('Morena', '22', 'F');
     $actor3 = new Actor('Ed', '29', 'M');
+    $actor4 = new Actor('Robert', '42', 'M');
+    $actor5 = new Actor('Guy', '22', 'M');
+    $actor6 = new Actor('Gwynenth', '54', 'M');
+    $actor01 = new Actor('Ryan', '32', 'M');
+    $actor02 = new Actor('Blake', '22', 'M');
+    $actor03 = new Actor('Peter', '29', 'M');
+    $actor04 = new Actor('Keanue', '42', 'M');
+    $actor05 = new Actor('Laurance', '22', 'M');
+    $actor06 = new Actor('Carrie-Anne', '54', 'M');
 
     $movies = [
         $movie1 = new Movie('deadpool-poster', 'Dead Pool', '4'),
-        // new Movie('iron-man-3', 'Iron Man 3', '4.5', $actor),
-        // new Movie('lanterna-verde', 'Lanterna Verde', '1', $actor),
-        // new Movie('matrix', 'Matrix', '5', $actor),
+        $movie2 = new Movie('iron-man-3', 'Iron Man 3', '4.5'),
+        $movie3 = new Movie('lanterna-verde', 'Lanterna Verde', '1'),
+        $movie4 = new Movie('matrix', 'Matrix', '5'),
     ];
 
     $movie1->addActor($actor1);
     $movie1->addActor($actor2);
     $movie1->addActor($actor3);
+    $movie2->addActor($actor4);
+    $movie2->addActor($actor5);
+    $movie2->addActor($actor6);
+    $movie3->addActor($actor01);
+    $movie3->addActor($actor02);
+    $movie3->addActor($actor03);
+    $movie4->addActor($actor04);
+    $movie4->addActor($actor05);
+    $movie4->addActor($actor06);
 
-    var_dump($movie1->actors);
+    // var_dump($movie1->actors);
     ?>
     <main>
         <div class="container">
