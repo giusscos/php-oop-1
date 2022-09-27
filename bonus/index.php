@@ -50,6 +50,11 @@
     $movie4->addActor($actor06);
 
     // var_dump($movie1->actors);
+
+    $movie1->removeActor($actor1);
+    $movie1->removeActor($actor3);
+
+    // var_dump($movie1->actors);
     ?>
     <main>
         <div class="container">

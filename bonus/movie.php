@@ -19,6 +19,13 @@ class Movie
         }
     }
     
+    public function removeActor($actor){
+        if(in_array($actor, $this->actors)){
+            $position = array_search($actor, $this->actors);
+            unset($this->actors[$position]);
+        }
+    }
+
     public function getCast(){
         return $this->actors;
     }
