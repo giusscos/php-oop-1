@@ -8,24 +8,39 @@ class Movie
 
     function __construct($poster, $title, $vote, $actors )
     {
-        if ($poster) {
+        $this->set_poster($poster);
+        $this->set_title($title);
+        $this->set_vote($vote);
+        $this->actors = $actors;
+    }
+
+    function set_poster($poster)
+    {
+        if($poster){
             $this->poster = $poster;
         } else {
-            $this->poster = 'null';
+            $this->poster = '0';
         }
-        if ($title) {
+    }
+
+    function set_title($title)
+    {
+        if($title){
             $this->title = $title;
         } else {
-            $this->title = 'null';
+            $this->title = 'Sconosciuto';
         }
-        if ($vote) {
+    }
+
+    function set_vote($vote)
+    {
+        if($vote){
             $this->vote = $vote;
         } else {
             $this->vote = '0';
         }
-        $this->actors = $actors;
     }
-
+    
     function get_info()
     {
         return $this->poster . ' >> ' . $this->title . ' >> ' . $this->vote . ' >> ' . $this->actors . ';';
