@@ -13,7 +13,8 @@
 
 <body>
     <?php
-    include __DIR__ . '/movie.php';
+    include __DIR__ . '/Movie.php';
+    include __DIR__ . '/Actor.php';
 
     $actors = [
         ['Ryan', 'Morena', 'Ed'],
@@ -22,12 +23,22 @@
         ['Keanue', 'Laurence', 'Carrie-Anne'],
     ];
 
+    $actor1 = new Actor('Ryan', '32', 'M');
+    $actor2 = new Actor('Morena', '22', 'F');
+    $actor3 = new Actor('Ed', '29', 'M');
+
     $movies = [
-        new Movie('deadpool-poster', 'Dead Pool', '4', $actors[0]),
-        new Movie('iron-man-3', 'Iron Man 3', '4.5', $actors[1]),
-        new Movie('lanterna-verde', 'Lanterna Verde', '1', $actors[2]),
-        new Movie('matrix', 'Matrix', '5', $actors[3]),
+        $movie1 = new Movie('deadpool-poster', 'Dead Pool', '4'),
+        // new Movie('iron-man-3', 'Iron Man 3', '4.5', $actor),
+        // new Movie('lanterna-verde', 'Lanterna Verde', '1', $actor),
+        // new Movie('matrix', 'Matrix', '5', $actor),
     ];
+
+    $movie1->addActor($actor1);
+    $movie1->addActor($actor2);
+    $movie1->addActor($actor3);
+
+    var_dump($movie1->actors);
     ?>
     <main>
         <div class="container">
@@ -50,11 +61,11 @@
                                 Top 3 Stars:
                                 <ul class="list_cast">
                                     <?php
-                                    foreach ($movie->get_cast() as $actor) {
+                                    foreach($movie->actors as $actor){
                                     ?>
-                                        <li class="list_item">
-                                            <?= $actor ?>
-                                        </li>
+                                    <li class="list_item">
+                                        <?= $actor->name ?>
+                                    </li>
                                     <?php
                                     }
                                     ?>

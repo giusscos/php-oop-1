@@ -4,17 +4,26 @@ class Movie
     public $poster;
     public $title;
     public $vote;
-    public $actors;
+    public $actors = [];
 
-    function __construct($poster, $title, $vote, $actors )
+    function __construct($poster, $title, $vote )
     {
         $this->set_poster($poster);
         $this->set_title($title);
         $this->set_vote($vote);
-        $this->actors = $actors;
     }
 
-    function set_poster($poster)
+    public function addActor($actor){
+        if(!in_array($actor, $this->actors)){
+            array_push($this->actors, $actor);
+        }
+    }
+    
+    public function getCast(){
+        return $this->actors;
+    }
+    
+    public function set_poster($poster)
     {
         if($poster){
             $this->poster = $poster;
@@ -22,8 +31,8 @@ class Movie
             $this->poster = '0';
         }
     }
-
-    function set_title($title)
+    
+    public function set_title($title)
     {
         if($title){
             $this->title = $title;
@@ -32,7 +41,7 @@ class Movie
         }
     }
 
-    function set_vote($vote)
+    public function set_vote($vote)
     {
         if($vote){
             $this->vote = $vote;
@@ -40,26 +49,17 @@ class Movie
             $this->vote = '0';
         }
     }
-    
-    function get_info()
-    {
-        return $this->poster . ' >> ' . $this->title . ' >> ' . $this->vote . ' >> ' . $this->actors . ';';
-    }
 
-    function get_poster()
+    public function get_poster()
     {
         return $this->poster;
     }
-    function get_title()
+    public function get_title()
     {
         return $this->title;
     }
-    function get_vote()
+    public function get_vote()
     {
         return $this->vote;
-    }
-
-    function get_cast(){
-        return $this->actors;
     }
 }
